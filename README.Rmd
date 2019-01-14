@@ -1,0 +1,33 @@
+---
+output:
+  github_document:
+    html_preview: true
+---
+
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+
+# RStudio::conf 2019
+
+## "What They Forgot to Teach You About R"
+Data, code, and workshop files used during the RStudio Conference 
+2019 workshop with Jenny Bryan.
+
+
+-------------------------
+
+
+-------------------------
+
+Created on `r Sys.Date()` by [Rmarkdown](https://github.com/rstudio/rmarkdown)
+(v`r utils::packageVersion("rmarkdown")`) and `r R.version$version.string`. 

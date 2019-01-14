@@ -1,0 +1,45 @@
+---
+title: "RStudio::conf 2019 Notes"
+output:
+  html_document:
+  toc: true
+  toc_float:
+    collapsed: false
+    smooth_scroll: false
+  number_sections: true
+---
+
+
+----------------------
+
+
+# Workshop: What they forgot to tell you about R
+
+## Day 1
+Here are some notes:
+
+* blah
+* blah
+
+## Day 2
+Here are some notes:
+
+* blah
+* blah
+
+
+# RStudio Conference
+## Day 1
+
+* blah
+* blah
+
+## Day 2
+
+
+
+
+-------------------------
+
+Created on `r Sys.Date()` by [Rmarkdown](https://github.com/rstudio/rmarkdown)
+(v`r utils::packageVersion("rmarkdown")`) and `r R.version$version.string`. 
