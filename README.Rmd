@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 ```
 
 
-# RStudio::conf 2019
+# RStudio::conf 2019 <img src="RStudio-Logo.png" align="right" height="100" width="250"/>
 
 ## "What They Forgot to Teach You About R"
 Data, code, and workshop files used during the RStudio Conference 

@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# RStudio::conf 2019
+# RStudio::conf 2019 <img src="RStudio-Logo.png" align="right" height="100" width="250"/>
 
 ## “What They Forgot to Teach You About R”
 
