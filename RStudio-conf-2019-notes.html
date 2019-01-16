@@ -378,19 +378,221 @@ $(document).ready(function () {
 <h1>Workshop: What they forgot to tell you about R</h1>
 <div id="day-1" class="section level2">
 <h2>Day 1</h2>
+<div id="sessions-1-2" class="section level3">
+<h3>Sessions 1-2</h3>
 <p>Here are some notes:</p>
 <ul>
-<li>blah</li>
-<li>blah</li>
+<li>jack handy:</li>
+<li>Figuring out library and library structures
+<ul>
+<li><code>.libPaths()</code></li>
+<li><code>installed.packages()</code></li>
+<li><code>01_explore-libraries_jenny.R</code></li>
+</ul></li>
+<li>Use relative paths
+<ul>
+<li>use <code>here::here()</code></li>
+<li><code>fs::path_real()</code> -&gt; for following symbolic links</li>
+</ul></li>
+<li>Naming things
+<ul>
+<li>machine readable - no spaces, no non-ascii</li>
+<li>human readable - stuff.R, thisissomesillyexampleofasillyfilename.txt</li>
+<li>sort nicely - prefix-01, dates yyyy-mm-dd (ISO 8601), common sense</li>
+</ul></li>
+<li>Safer way to source files than <code>source()</code>
+<ul>
+<li><code>callr</code> package</li>
+</ul></li>
 </ul>
+</div>
+<div id="sessions-3-4" class="section level3">
+<h3>Sessions 3-4</h3>
+<p>Here are some notes:</p>
+<ul>
+<li>Debugging in R with Jim Hester
+<ul>
+<li>google the <code>exact</code> error message</li>
+<li>Keyword search comminity.rstudio.com</li>
+<li>StackOverflow - [r] tag</li>
+</ul></li>
+<li>Useful functions
+<ul>
+<li><code>traceback()</code></li>
+<li><code>print()</code>, <code>cat()</code>, <code>str()</code> -&gt; use str() more than print()</li>
+<li><code>browser()</code></li>
+<li><code>debug()</code>, <code>trace()</code>, <code>recover()</code></li>
+<li><code>options(error = traceback)</code> -&gt; automatically print <code>traceback()</code></li>
+<li><code>options(error = recover)</code> -&gt; choose which level of call stack to enter browser</li>
+<li>where inside <code>browser()</code> -&gt; gives call stack</li>
+</ul></li>
+<li>Useful functions
+<ul>
+<li><a href="https://github.com/cran">github.com/cran</a> -&gt; CRAN as github for viewing</li>
+<li><a href="https://github.com/search">github.com/search</a>
+<ul>
+<li>search window: “Error ‘x’ is non-numeric” repo:wch/r-source</li>
+</ul></li>
+<li><a href="https://github.com/wch/r-source">github.com/wch/r-source</a></li>
+<li>lookup package finds source code of a function on GitHub
+<ul>
+<li><code>devtools::install_github(&quot;jimhester/lookup&quot;)</code></li>
+</ul></li>
+</ul></li>
+<li>De-centralized Version Congrol w <code>GitHub</code>
+<ul>
+<li>Multiple users</li>
+</ul></li>
+<li>R scripts can be rendered by hitting the “notebook” icon at top (next to <code>knit</code> icon)
+<ul>
+<li>This is called “render to markdown”</li>
+<li>You can then click on the file in GitHub and it’s rendered nicely, not as an HTML page.</li>
+</ul></li>
+</ul>
+</div>
 </div>
 <div id="day-2" class="section level2">
 <h2>Day 2</h2>
-<p>Here are some notes:</p>
+<div id="sessions-1-2-1" class="section level3">
+<h3>Sessions 1-2</h3>
 <ul>
-<li>blah</li>
-<li>blah</li>
+<li>Setting up <code>.Rprofile</code> and <code>.Renviron</code>
+<ul>
+<li>Multiple users</li>
+</ul></li>
+<li>GitHub personal access token (PAT)
+<ul>
+<li>setup and using outside of SSH</li>
+</ul></li>
+<li>More detailed version of <code>.Rpofile</code>
+<ul>
+<li>set up personalized startup message</li>
+<li><code>.First</code> and <code>.Last</code></li>
+<li>use of the <code>cowsay</code> package</li>
+</ul></li>
+<li>Maintaining <code>R</code>
+<ul>
+<li>Update packages -&gt; most recent versions</li>
+<li><code>devtools::upgrade_packages(&quot;pkgname&quot;)</code> -&gt; remembers where pkg came from, e.g. github</li>
+<li>Reinstalling from scrtach</li>
+<li><code>pkgs &lt;- installed.packages(Sys.getenv(&quot;R_LIBS_USER&quot;)) %&gt;% tibble::as_tibble()</code></li>
+<li>Then filter <code>pkgs</code> for only pkgs not provided as <code>base</code> or <code>recommended</code></li>
+<li><code>install.packages(&quot;pkgs&quot;)</code></li>
+</ul></li>
 </ul>
+<div id="r-infrastructure" class="section level4">
+<h4>R Infrastructure</h4>
+<ul>
+<li>R Infrastructure (Jeroen Ooms)
+<ul>
+<li>The <code>R</code> universe actually depends on numerous external system level libraries
+<ul>
+<li><code>BLAS</code> and <code>LAPACK</code> packages, highly optimized linear algebra, FORTRAN</li>
+<li><code>LIBCURL</code> package, anything networking and server related</li>
+<li><code>PCRE</code> Peal Compatible Regular Expressions; all things regex</li>
+<li><code>CAIRO</code> graphical rendering and R graphics device, <code>x11()</code> and <code>quartz()</code></li>
+</ul></li>
+<li>Linking to external libraries
+<ul>
+<li><code>Linux</code>: Dynamic and managed by <code>apt</code> or <code>yum</code></li>
+<li><code>MacOS/Windows</code>: Static (comes with install)</li>
+</ul></li>
+</ul></li>
+<li>R packages (CRAN and scalability)
+<ul>
+<li>Some R packages often depend on specific external libraries</li>
+<li>are linked and available at the <code>CRAN</code> webpage for the package</li>
+</ul></li>
+<li>Tools, Imaging, Graphics and Vision
+<ul>
+<li>All quite common external open source libraries</li>
+<li>e.g. <code>TESSERACT</code> performs OCR</li>
+<li>Vision = detecting shapes in images, following players on soccer field, security, etc.</li>
+</ul></li>
+<li>Future work
+<ul>
+<li><code>RTOOLS 40</code> -&gt; compiled toolchain for building/updating external libraries</li>
+<li><code>RHUB</code> -&gt; package testing (especially with compiled code), esp. cross platform, nice API</li>
+<li><code>devtools::check_rhub()</code> -&gt; checks in <code>RHUB</code></li>
+</ul></li>
+<li>Setting up a <code>dev</code> environment
+<ul>
+<li><code>devtools::has_devel()</code></li>
+<li>Use <code>brew cask install r-app</code> at command line (<em>not</em> <code>brew install r</code>)
+<ul>
+<li>compiles package binaries</li>
+</ul></li>
+<li>Try not to use <code>install.packages()</code> because you lose the installation tool chain and the reproducibility to create your environment</li>
+<li><ul>
+<li><code>devtools::install_dev()</code> -&gt; installs GitHub development version if link exists in <code>URL</code> field of the DESCRIPTION file</li>
+<li><code>devtools::install_github()</code> -&gt; install any package from GitHub; need repo location
+<ul>
+<li><code>devtools::install_github(&quot;r-lib/glue&quot;)</code> -&gt; install latest head</li>
+<li><code>devtools::install_github(&quot;r-lib/glue@v1.2.0&quot;)</code> -&gt; install version</li>
+<li><code>devtools::install_github(&quot;r-lib/glue@#81&quot;)</code> -&gt; install specific version, not necessarily merged issues</li>
+</ul></li>
+<li><code>devtools::install_version()</code> -&gt; install a specific version of a package</li>
+<li><code>devtools::install()</code> -&gt; install a local repository; pass the path</li>
+</ul></li>
+<li>Use the <code>library(x, lib.loc =)</code> argument when loading library from a temporary location</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="sessions-3-4-1" class="section level3">
+<h3>Sessions 3-4</h3>
+<ul>
+<li>Git Workflows
+<ul>
+<li><p>“Fork &amp; clone”</p>
+<pre><code>git remote -v
+git remote add upstream https://github.com/jennybc/wtf-2019-rsc.git
+git pull upstream master --ff-only
+git push</code></pre></li>
+</ul></li>
+<li>Major resource
+<ul>
+<li><a href="https://happygitwithr.com">Happy Git</a> by Jenny Brian</li>
+</ul></li>
+<li>Branches
+<ul>
+<li><code>Git</code> and time travel</li>
+<li><code>git checkout -b &lt;branchname&gt; SHA-1</code></li>
+<li><code>git revert --no-edit HEAD</code> -&gt; 1 commit</li>
+<li><code>git revert --no-edit SHA-1</code> -&gt; a specific SHA-1</li>
+</ul></li>
+<li>Resetting
+<ul>
+<li>git reset <file> -&gt; remove local changes</li>
+<li>git reset –hard -&gt; undo all local changes with HEAD if <em>haven’t</em> committed</li>
+<li>git reset ~HEAD -&gt; undo all local changes with HEAD if <em>have</em> committed (<code>Git Squash</code>)</li>
+</ul></li>
+<li>Surgical Time Travel
+<ul>
+<li><code>git cherry-pick SHA-1</code> -&gt; pull in a specific commit into the current branch</li>
+<li><code>git checkout SHA-1 -- &lt;file&gt;</code> -&gt; pull out a specific from a specific commit into current branch</li>
+</ul></li>
+<li>Amend Commits
+<ul>
+<li>There is a “Amend previous commit” checkbox in the <code>RStudio</code> API</li>
+<li><code>git commit --amend -m &quot;message&quot;</code></li>
+</ul></li>
+<li>Abort Merge
+<ul>
+<li><code>git merge --abort</code> -&gt; oh S&amp;#*t! abort the merge and figure out a plan</li>
+</ul></li>
+<li>Working with lists with <code>purrr</code>
+<ul>
+<li><code>str(got_chars, max.level = 2, list.len = 4)</code></li>
+<li><code>View(got_chars)</code></li>
+<li><code>map_chr(got_chars, &quot;playedBy&quot;, .default = NA)</code> -&gt; if you have missing entries</li>
+<li><code>map_chr(got_chars, list(&quot;playedBy&quot;, 1L))</code> -&gt; if you have &gt; length 1 entries</li>
+<li><code>map_chr(got_chars, list(&quot;playedBy&quot;, 1L), .default = NA)</code> -&gt; both challenges</li>
+<li><code>purrr::enframe()</code> -&gt; learn about it … might be useful</li>
+</ul></li>
+</ul>
+<hr />
+</div>
 </div>
 </div>
 <div id="rstudio-conference" class="section level1">
@@ -399,13 +601,17 @@ $(document).ready(function () {
 <h2>Day 1</h2>
 <ul>
 <li>blah</li>
-<li>blah</li>
+<li>foo</li>
 </ul>
 </div>
 <div id="day-2-1" class="section level2">
 <h2>Day 2</h2>
+</div>
+<div id="firacode" class="section level2">
+<h2>FiraCode</h2>
+<p>fonts in editor: <a href="https://github.com/tonsky/FiraCode"></a></p>
 <hr />
-<p>Created on 2019-01-13 by <a href="https://github.com/rstudio/rmarkdown">Rmarkdown</a> (v1.11) and R version 3.5.1 (2018-07-02).</p>
+<p>Created on 2019-01-16 by <a href="https://github.com/rstudio/rmarkdown">Rmarkdown</a> (v1.11) and R version 3.5.1 (2018-07-02).</p>
 </div>
 </div>
 

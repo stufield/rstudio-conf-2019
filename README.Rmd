@@ -17,15 +17,24 @@ knitr::opts_chunk$set(
 ```
 
 
-# RStudio::conf 2019 <img src="RStudio-Logo.png" align="right" height="100" width="250"/>
+# RStudio::conf 2019 <img src="RStudio-Logo.png" align="right" height="100" width="275"/>
 
 ## "What They Forgot to Teach You About R"
 Data, code, and workshop files used during the RStudio Conference 
 2019 workshop with Jenny Bryan.
 
-
 -------------------------
 
+## Course Bookdown site
+[https://jennybc.github.io/wtf-2019-rsc](https://jennybc.github.io/wtf-2019-rsc/)
+
+
+<details>
+<summary>Session info</summary>
+```{r}
+devtools::session_info()
+```
+</details>
 
 -------------------------
 
