@@ -596,22 +596,141 @@ git push</code></pre></li>
 </div>
 </div>
 <div id="rstudio-conference" class="section level1">
-<h1>RStudio Conference</h1>
+<h1><code>RStudio</code> Conference</h1>
 <div id="day-1-1" class="section level2">
 <h2>Day 1</h2>
 <ul>
-<li>blah</li>
-<li>foo</li>
+<li><code>RStudio</code>’s Growth
+<ul>
+<li>1700 attendees in 2019</li>
+<li>1100 in 2018</li>
+</ul></li>
+<li>Concept of a “Data Compendium”
+<ul>
+<li>stratified agreed-upon project structure</li>
+<li>Include a simple “DESCRIPTION”-like minimal file for dependencies</li>
+<li>Include a <code>Dockerfile</code> to the compendium</li>
+<li>Karthik Ram: <a href="https://github.com/karthik">https://github.com/karthik</a></li>
+<li><code>Drake</code> package -&gt; Dataframes in R for (GNU) <code>Make</code>
+<ul>
+<li>instead of <code>Makefile</code></li>
+</ul></li>
+<li><code>piggyback</code> package -&gt; link binaries to specific GitHub versions</li>
+</ul></li>
+<li><code>RStudio</code> IDE 1.2
+<ul>
+<li>SQL, Python, D3, Stan compatible -&gt; all within <code>RStudio</code></li>
+<li>Python chunks are now non-independent -&gt; can refer to variables from other chunks</li>
+<li>D3 -&gt; visualizations -&gt; ex. <code>bubbles.js</code></li>
+<li>New Python functionality -&gt; line-by-line execution</li>
+<li>New Featues:
+<ul>
+<li>Background jobs -&gt; don’t have to wait for scrips to finish
+<ul>
+<li>Use “source as local job” (dropdown menu)</li>
+<li>Can run multiple simultaneous jobs</li>
+</ul></li>
+<li>Auto-installation of missing R packages
+<ul>
+<li>analsis of R script for libraries not installed -&gt; appears at top of scripter</li>
+</ul></li>
+<li>Rmarkdown -&gt; PowerPoint (dropdown menu)</li>
+<li>Custom themes -&gt; nightowl</li>
+</ul></li>
+</ul></li>
+<li><code>RStudio</code> Package Manager (Sean Lopp)
+<ul>
+<li>managing central repository</li>
+<li>automatic versioning</li>
+<li>CRAN, curated CRAN, local pkgs, GitHub</li>
+<li>usage metrics</li>
+<li><code>countdeps::countdeps()</code></li>
+<li><code>rstd.io/countdeps</code></li>
+</ul></li>
+<li><code>RStudio</code> Job Launcher
+<ul>
+<li>launch independent jobs to a server without waiting within the IDE</li>
+<li>For use with <code>RStudio</code> Server product line</li>
+<li>Future releases of <code>RStudio</code> will trickle down various levels</li>
+</ul></li>
+<li>The <code>mlflow</code> platform
+<ul>
+<li>for managing machine learning workflows
+<ol style="list-style-type: decimal">
+<li>keeps track of what you did</li>
+<li>bundles your project for reproducibility</li>
+<li>models</li>
+</ol></li>
+</ul></li>
+<li>Democratizing <code>RStudio</code> API
+<ul>
+<li>James Blair (Software engineer @ <code>RStudio</code>)</li>
+<li>Using the <code>plumber</code> package
+<ul>
+<li>Create API endpoints for any arbitrary R functions</li>
+<li>Uses <code>roxygen</code> style tags (<code>#*</code>) to identify <code>plumber</code> specific commants/control sequences</li>
+<li>Functions with <code>OpenAPI</code> under the hood</li>
+<li>Works well with <code>JSON</code> and <code>YAML</code></li>
+</ul></li>
+<li>Similar to <code>Shiny Apps</code> provided to end users</li>
+<li>Facilitates hand-off between R developers of Shiny Apps to software engineers who typically want programatic access
+<ul>
+<li><code>Plumber</code> can facilitate this transition</li>
+</ul></li>
+<li>The talk <a href="https://github.com/sol-eng/plumber-model">https://github.com/sol-eng/plumber-model</a></li>
+<li><strong>Example</strong>: created a quick predict model that a Swift App developer was easily able to turn into a phone App, where the developer had no idea how to use <code>R</code>.</li>
+</ul></li>
+<li>Model representaion with <code>Broom</code>
+<ul>
+<li>Alex Hayes</li>
+<li>No uniform convension or standard for model object shapes</li>
+<li><code>broom::tidy()</code> -&gt; returns tibble of model <code>summary()</code> -&gt; rows == parameters
+<ul>
+<li>also hase a <code>CI=</code> argument</li>
+</ul></li>
+<li><code>broom::glance()</code> -&gt; 1 row tibble</li>
+<li><code>broom::augment()</code> -&gt; add infomation about observations to a dataset</li>
+</ul></li>
+<li>Tensor flow eager execution
+<ul>
+<li><code>Keras</code> functional API</li>
+<li>Generative adversarial networks (GANs)</li>
+<li>Variational auto-encoders (VAEs)</li>
+</ul></li>
+<li>Karl Broman
+<ul>
+<li>rewriting a very old R pkg -&gt; R/qtl (quantitative trait loci)</li>
+<li>Hilarious …</li>
+<li>Long-term story of an old package, mistakes made, all sorts of hilarious what-not-to-do anecdotes</li>
+</ul></li>
+<li>The <code>gganimate()</code> cookbook
+<ul>
+<li>Thomas Lin Pedersen</li>
+<li>a grammar of animated graphics -&gt; extension of <code>ggplot2</code></li>
+<li>Three types:
+<ul>
+<li>transitions -&gt; move fig from one to the other</li>
+<li>views -&gt; change viewpoint</li>
+<li>shadows -&gt; memory of the previous state to create trails on points</li>
+</ul></li>
+<li>A <a href="www.gganimate.com">Getting started guide</a></li>
+<li>Interpolates data to ensure animation is smooth -&gt; corrects frame rate on the fly</li>
+</ul></li>
 </ul>
 </div>
 <div id="day-2-1" class="section level2">
 <h2>Day 2</h2>
-</div>
-<div id="firacode" class="section level2">
-<h2>FiraCode</h2>
-<p>fonts in editor: <a href="https://github.com/tonsky/FiraCode"></a></p>
+<ul>
+<li>blah</li>
+<li>foo</li>
+</ul>
 <hr />
-<p>Created on 2019-01-16 by <a href="https://github.com/rstudio/rmarkdown">Rmarkdown</a> (v1.11) and R version 3.5.1 (2018-07-02).</p>
+<div id="firacode" class="section level3">
+<h3>FiraCode</h3>
+<p>Fonts in editor: <a href="https://github.com/tonsky/FiraCode">https://github.com/tonsky/FiraCode</a></p>
+<hr />
+<p>Created on 2019-01-17 by <a href="https://github.com/rstudio/rmarkdown">Rmarkdown</a> (v1.11) and R version 3.5.1 (2018-07-02).</p>
+</div>
 </div>
 </div>
 

@@ -15,6 +15,11 @@ Bryan.
 
 [https://jennybc.github.io/wtf-2019-rsc](https://jennybc.github.io/wtf-2019-rsc/)
 
+## Instructor GitHub
+
+  - Jenny Bryan: <https://github.com/jennybc>
+  - Jim Hester: <https://github.com/jimhester>
+
 <details>
 
 <summary>Session info</summary>
@@ -31,7 +36,7 @@ devtools::session_info()
 #>  collate  en_US.UTF-8                 
 #>  ctype    en_US.UTF-8                 
 #>  tz       America/Chicago             
-#>  date     2019-01-16                  
+#>  date     2019-01-17                  
 #> 
 #> ─ Packages ──────────────────────────────────────────────────────────────
 #>  package     * version date       lib source        
@@ -78,6 +83,6 @@ devtools::session_info()
 
 -----
 
-Created on 2019-01-16 by
+Created on 2019-01-17 by
 [Rmarkdown](https://github.com/rstudio/rmarkdown) (v1.11) and R version
 3.5.1 (2018-07-02).

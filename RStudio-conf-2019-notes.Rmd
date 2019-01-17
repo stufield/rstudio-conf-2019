@@ -178,18 +178,112 @@ Here are some notes:
 --------------
 
 
-# RStudio Conference
+# `RStudio` Conference
 ## Day 1
+* `RStudio`'s Growth
+  + 1700 attendees in 2019
+  + 1100 in 2018
+
+* Concept of a "Data Compendium"
+  + stratified agreed-upon project structure
+  + Include a simple "DESCRIPTION"-like minimal file for dependencies
+  + Include a `Dockerfile` to the compendium
+  + Karthik Ram: [https://github.com/karthik](https://github.com/karthik)
+  + `Drake` package -> Dataframes in R for (GNU) `Make`
+    + instead of `Makefile`
+  + `piggyback` package -> link binaries to specific GitHub versions
+ 
+* `RStudio` IDE 1.2
+  + SQL, Python, D3, Stan compatible -> all within `RStudio`
+  + Python chunks are now non-independent -> can refer to variables from other chunks
+  + D3 -> visualizations -> ex. `bubbles.js`
+  + New Python functionality -> line-by-line execution
+  + New Featues:
+    + Background jobs -> don't have to wait for scrips to finish
+      + Use "source as local job" (dropdown menu)
+      + Can run multiple simultaneous jobs
+    + Auto-installation of missing R packages
+      + analsis of R script for libraries not installed -> appears at top of scripter
+    + Rmarkdown -> PowerPoint (dropdown menu)
+    + Custom themes -> nightowl
+
+* `RStudio` Package Manager (Sean Lopp)
+  + managing central repository
+  + automatic versioning
+  + CRAN, curated CRAN, local pkgs, GitHub
+  + usage metrics
+  + `countdeps::countdeps()`
+  + `rstd.io/countdeps`
+  
+* `RStudio` Job Launcher
+  + launch independent jobs to a server without waiting within the IDE
+  + For use with `RStudio` Server product line
+  + Future releases of `RStudio` will trickle down various levels
+  
+* The `mlflow` platform
+  + for managing machine learning workflows
+    1. keeps track of what you did
+    1. bundles your project for reproducibility
+    1. models
+    
+* Democratizing `RStudio` API
+  + James Blair (Software engineer @ `RStudio`)
+  + Using the `plumber` package
+    + Create API endpoints for any arbitrary R functions
+    + Uses `roxygen` style tags (`#*`) to identify `plumber`
+      specific commants/control sequences
+    + Functions with `OpenAPI` under the hood
+    + Works well with `JSON` and `YAML`
+  + Similar to `Shiny Apps` provided to end users
+  + Facilitates hand-off between R developers of Shiny Apps to software
+    engineers who typically want programatic access
+    + `Plumber` can facilitate this transition
+  + The talk [https://github.com/sol-eng/plumber-model](https://github.com/sol-eng/plumber-model)
+  + **Example**: created a quick predict model that a Swift App developer was 
+    easily able to turn into a phone App, where the developer had no idea how
+    to use `R`.
+
+* Model representaion with `Broom`  
+  + Alex Hayes
+  + No uniform convension or standard for model object shapes
+  + `broom::tidy()` -> returns tibble of model `summary()` -> rows == parameters
+    + also hase a `CI=` argument
+  + `broom::glance()` -> 1 row tibble
+  + `broom::augment()` -> add infomation about observations to a dataset
+  
+* Tensor flow eager execution
+  + `Keras` functional API
+  + Generative adversarial networks (GANs)
+  + Variational auto-encoders (VAEs)
+  
+* Karl Broman
+  + rewriting a very old R pkg -> R/qtl (quantitative trait loci)
+  + Hilarious ...
+  + Long-term story of an old package, mistakes made, all sorts of hilarious
+    what-not-to-do anecdotes
+  
+* The `gganimate()` cookbook
+  + Thomas Lin Pedersen
+  + a grammar of animated graphics -> extension of `ggplot2`
+  + Three types:
+    + transitions -> move fig from one to the other
+    + views -> change viewpoint
+    + shadows -> memory of the previous state to create trails on points
+  + A [Getting started guide](www.gganimate.com)
+  + Interpolates data to ensure animation is smooth -> corrects frame rate on the fly
+
+
+## Day 2
 
 * blah
 * foo
 
-## Day 2
 
+--------------
 
-
-## FiraCode
-fonts in editor: [](https://github.com/tonsky/FiraCode)
+### FiraCode
+Fonts in editor:
+[https://github.com/tonsky/FiraCode](https://github.com/tonsky/FiraCode)
 
 -------------------------
 

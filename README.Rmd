@@ -28,6 +28,10 @@ Data, code, and workshop files used during the RStudio Conference
 ## Course Bookdown site
 [https://jennybc.github.io/wtf-2019-rsc](https://jennybc.github.io/wtf-2019-rsc/)
 
+## Instructor GitHub
+* Jenny Bryan: [https://github.com/jennybc](https://github.com/jennybc)
+* Jim Hester: [https://github.com/jimhester](https://github.com/jimhester)
+
 
 <details>
 <summary>Session info</summary>
