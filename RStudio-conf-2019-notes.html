@@ -599,61 +599,71 @@ git push</code></pre></li>
 <h1><code>RStudio</code> Conference</h1>
 <div id="day-1-1" class="section level2">
 <h2>Day 1</h2>
-<ul>
-<li><code>RStudio</code>’s Growth
+<div id="rstudios-growth" class="section level3">
+<h3><code>RStudio</code>’s Growth</h3>
 <ul>
 <li>1700 attendees in 2019</li>
 <li>1100 in 2018</li>
-</ul></li>
-<li>Concept of a “Data Compendium”
+</ul>
+</div>
+<div id="concept-of-a-data-compendium" class="section level3">
+<h3>Concept of a “Data Compendium”</h3>
 <ul>
 <li>stratified agreed-upon project structure</li>
 <li>Include a simple “DESCRIPTION”-like minimal file for dependencies</li>
 <li>Include a <code>Dockerfile</code> to the compendium</li>
 <li>Karthik Ram: <a href="https://github.com/karthik">https://github.com/karthik</a></li>
-<li><code>Drake</code> package -&gt; Dataframes in R for (GNU) <code>Make</code>
+<li><code>Drake</code> package -&gt; data frames in R for (GNU) <code>Make</code>
 <ul>
 <li>instead of <code>Makefile</code></li>
 </ul></li>
 <li><code>piggyback</code> package -&gt; link binaries to specific GitHub versions</li>
-</ul></li>
-<li><code>RStudio</code> IDE 1.2
+</ul>
+</div>
+<div id="rstudio-ide-1.2" class="section level3">
+<h3><code>RStudio</code> IDE 1.2</h3>
 <ul>
 <li>SQL, Python, D3, Stan compatible -&gt; all within <code>RStudio</code></li>
 <li>Python chunks are now non-independent -&gt; can refer to variables from other chunks</li>
 <li>D3 -&gt; visualizations -&gt; ex. <code>bubbles.js</code></li>
 <li>New Python functionality -&gt; line-by-line execution</li>
-<li>New Featues:
+<li>New Features:
 <ul>
 <li>Background jobs -&gt; don’t have to wait for scrips to finish
 <ul>
-<li>Use “source as local job” (dropdown menu)</li>
+<li>Use “source as local job” (drop-down menu)</li>
 <li>Can run multiple simultaneous jobs</li>
 </ul></li>
 <li>Auto-installation of missing R packages
 <ul>
-<li>analsis of R script for libraries not installed -&gt; appears at top of scripter</li>
+<li>analysis of R script for libraries not installed -&gt; appears at top of script editor</li>
 </ul></li>
-<li>Rmarkdown -&gt; PowerPoint (dropdown menu)</li>
-<li>Custom themes -&gt; nightowl</li>
+<li>Rmarkdown -&gt; PowerPoint (drop-down menu)</li>
+<li>Custom themes -&gt; <code>night owlish</code></li>
 </ul></li>
-</ul></li>
-<li><code>RStudio</code> Package Manager (Sean Lopp)
+</ul>
+</div>
+<div id="rstudio-package-manager-sean-lopp" class="section level3">
+<h3><code>RStudio</code> Package Manager (Sean Lopp)</h3>
 <ul>
 <li>managing central repository</li>
 <li>automatic versioning</li>
-<li>CRAN, curated CRAN, local pkgs, GitHub</li>
+<li>CRAN, curated CRAN, local packages, GitHub</li>
 <li>usage metrics</li>
 <li><code>countdeps::countdeps()</code></li>
 <li><code>rstd.io/countdeps</code></li>
-</ul></li>
-<li><code>RStudio</code> Job Launcher
+</ul>
+</div>
+<div id="rstudio-job-launcher" class="section level3">
+<h3><code>RStudio</code> Job Launcher</h3>
 <ul>
 <li>launch independent jobs to a server without waiting within the IDE</li>
 <li>For use with <code>RStudio</code> Server product line</li>
 <li>Future releases of <code>RStudio</code> will trickle down various levels</li>
-</ul></li>
-<li>The <code>mlflow</code> platform
+</ul>
+</div>
+<div id="the-mlflow-platform" class="section level3">
+<h3>The <code>mlflow</code> platform</h3>
 <ul>
 <li>for managing machine learning workflows
 <ol style="list-style-type: decimal">
@@ -661,8 +671,10 @@ git push</code></pre></li>
 <li>bundles your project for reproducibility</li>
 <li>models</li>
 </ol></li>
-</ul></li>
-<li>Democratizing <code>RStudio</code> API
+</ul>
+</div>
+<div id="democratizing-rstudio-api" class="section level3">
+<h3>Democratizing <code>RStudio</code> API</h3>
 <ul>
 <li>James Blair (Software engineer @ <code>RStudio</code>)</li>
 <li>Using the <code>plumber</code> package
@@ -673,37 +685,43 @@ git push</code></pre></li>
 <li>Works well with <code>JSON</code> and <code>YAML</code></li>
 </ul></li>
 <li>Similar to <code>Shiny Apps</code> provided to end users</li>
-<li>Facilitates hand-off between R developers of Shiny Apps to software engineers who typically want programatic access
+<li>Facilitates hand-off between R developers of Shiny Apps to software engineers who typically want programmatic access
 <ul>
 <li><code>Plumber</code> can facilitate this transition</li>
 </ul></li>
 <li>The talk <a href="https://github.com/sol-eng/plumber-model">https://github.com/sol-eng/plumber-model</a></li>
 <li><strong>Example</strong>: created a quick predict model that a Swift App developer was easily able to turn into a phone App, where the developer had no idea how to use <code>R</code>.</li>
-</ul></li>
-<li>Model representaion with <code>Broom</code>
+</ul>
+</div>
+<div id="model-representation-with-broom" class="section level3">
+<h3>Model representation with <code>Broom</code></h3>
 <ul>
 <li>Alex Hayes</li>
-<li>No uniform convension or standard for model object shapes</li>
+<li>No uniform convention or standard for model object shapes</li>
 <li><code>broom::tidy()</code> -&gt; returns tibble of model <code>summary()</code> -&gt; rows == parameters
 <ul>
-<li>also hase a <code>CI=</code> argument</li>
+<li>also has a <code>CI=</code> argument</li>
 </ul></li>
-<li><code>broom::glance()</code> -&gt; 1 row tibble</li>
-<li><code>broom::augment()</code> -&gt; add infomation about observations to a dataset</li>
-</ul></li>
+<li><code>broom::glance()</code> -&gt; 1 row tibble about Goodness of Fit</li>
+<li><p><code>broom::augment()</code> -&gt; add information about observations to a dataset</p></li>
 <li>Tensor flow eager execution
 <ul>
 <li><code>Keras</code> functional API</li>
 <li>Generative adversarial networks (GANs)</li>
 <li>Variational auto-encoders (VAEs)</li>
 </ul></li>
-<li>Karl Broman
+</ul>
+</div>
+<div id="karl-broman" class="section level3">
+<h3>Karl Broman</h3>
 <ul>
-<li>rewriting a very old R pkg -&gt; R/qtl (quantitative trait loci)</li>
+<li>rewriting a very old R pkg -&gt; <code>R/qtl</code> (quantitative trait loci)</li>
 <li>Hilarious …</li>
 <li>Long-term story of an old package, mistakes made, all sorts of hilarious what-not-to-do anecdotes</li>
-</ul></li>
-<li>The <code>gganimate()</code> cookbook
+</ul>
+</div>
+<div id="the-gganimate-cookbook" class="section level3">
+<h3>The <code>gganimate()</code> cookbook</h3>
 <ul>
 <li>Thomas Lin Pedersen</li>
 <li>a grammar of animated graphics -&gt; extension of <code>ggplot2</code></li>
@@ -715,22 +733,164 @@ git push</code></pre></li>
 </ul></li>
 <li>A <a href="www.gganimate.com">Getting started guide</a></li>
 <li>Interpolates data to ensure animation is smooth -&gt; corrects frame rate on the fly</li>
-</ul></li>
 </ul>
+</div>
 </div>
 <div id="day-2-1" class="section level2">
 <h2>Day 2</h2>
+<div id="a-fresh-approach-to-pkg-mgmt-with-pkg" class="section level3">
+<h3>A fresh approach to pkg mgmt with <code>pkg</code></h3>
 <ul>
-<li>blah</li>
-<li>foo</li>
+<li>Gabor Csardi</li>
+<li><code>devtools::install_github(&quot;r-lib/pkg&quot;)</code></li>
+<li>The <code>pkg</code> package has 3 main features:
+<ul>
+<li>Speedy features: concurrent HTTP requests, building, and install. Lazy downloads (don’t install if unnecessary). And caching meta data &amp; pkg files</li>
+<li>Safety features: fails on ERROR, conflicts declared prior to install, all package dependencies in a private library, detect and fail for loaded packages. Also uses sub-process to perform install to work around loaded package interferences</li>
+<li><p>Convenience features: Progress bar, CRAN, BioConductor, GitHub, Remotes -&gt; DESCRIPTION</p>
+<pre><code>Remotes:
+  r-lib/pkgcache,
+  tidyverse/glue@dev</code></pre></li>
+<li>Everything all in the same call!
+<ul>
+<li><code>pkg::pkg_install(&quot;dplyr&quot;, lib = &quot;/tmp/lib&quot;)</code> -&gt; CRAN</li>
+<li><code>pkg::pkg_install(&quot;eisa&quot;, lib = &quot;/tmp/lib&quot;)</code> -&gt; BioConductor. Same call!</li>
+<li><code>pkg::pkg_install(&quot;r-lib/pkg&quot;, lib = &quot;/tmp/lib&quot;)</code> -&gt; GitHub. Same call!</li>
+</ul></li>
+<li>Conflicts
+<ul>
+<li>Automatically detected early and trips ERROR</li>
+</ul></li>
+<li>Safe and Convenient workflows
+<ul>
+<li>Everything set up in a <code>.Rprofile</code> and <code>DESCRIPTION</code> files</li>
+<li>Not too convenient yet, so this will eventually change</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="managing-dependencies" class="section level3">
+<h3>Managing Dependencies</h3>
+<ul>
+<li>Jim Hester</li>
+<li>The zero-dependency myth</li>
+<li>Concept of <code>bitrot</code> -&gt; gradual change creeps in and code no longer works</li>
+<li>Not all dependencies are equal! It’s OK to have some.</li>
+<li>Issues to consider:
+<ul>
+<li>pkg size</li>
+<li>install time</li>
+<li>other dependencies</li>
+<li>system-level dependencies (e.g. <code>rJava</code> is a pain)</li>
+</ul></li>
+<li>Must carefully weigh the cost-benefit of adding a particular package</li>
+<li>There are pitfalls of dependency removal
+<ul>
+<li>e.g. less testing</li>
+<li>you’re not as good as you think you are</li>
+</ul></li>
+<li>The <code>itdepends</code> package
+<ul>
+<li>helps weight pros-cons of adding a package</li>
+<li><code>itdepends::dep_usage_proj()</code> -&gt; for a R project</li>
+<li><code>itdepends::dep_usage_pkg()</code> -&gt; for a package</li>
+<li><code>itdepends::dep_weight()</code></li>
+<li><code>itdepends::dep_plot_time()</code> -&gt; graphical display of install time and size</li>
+<li><code>itdepends::dep_plot_size()</code></li>
+<li><code>itdepends::dep_locate(&quot;purrr&quot;)</code> -&gt; assist removal, finds all instances of a dependency</li>
+<li>Slides <a href="https://speakerdeck.com/jimhester/it-depends">https://speakerdeck.com/jimhester/it-depends</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="the-vctrs-package" class="section level3">
+<h3>The <code>vctrs</code> package</h3>
+<ul>
+<li>Hadley Wickham</li>
+<li>Type stability
+<ul>
+<li>rules associated with <code>c()</code> and lowest type in concatenation
+<ol style="list-style-type: decimal">
+<li>types should be stable</li>
+<li>the order should not dictate the result -&gt; <code>c(NULL, date)</code> vs <code>c(data, NULL)</code></li>
+<li>the rules should be consistent</li>
+</ol></li>
+<li>Main function -&gt; <code>vec_c()</code></li>
+</ul></li>
+<li>Alternative:
+<ul>
+<li><code>vec_typeof()</code></li>
+</ul></li>
+<li>Recycling rules are strange
+<ul>
+<li><code>c(1, 2) + c(1, 2, 3)</code></li>
+</ul></li>
+<li>New rules for vector classes</li>
+<li>Website: <a href="https://vctrs.r-lib.org/">https://vctrs.r-lib.org/</a></li>
+</ul>
+</div>
+<div id="tidy-eval-in-context" class="section level3">
+<h3>Tidy Eval in Context</h3>
+<ul>
+<li>Jenny Bryan</li>
+<li>What is tidy-eval?
+<ul>
+<li>toolkit for meta-programming (meta-programming)
+<ul>
+<li>NSE, naked variable names, etc.</li>
+</ul></li>
+<li>tidy-eval powers things like <code>quosures</code></li>
+</ul></li>
+<li>NSE
+<ul>
+<li>manipulate either the expression before it’s executed or the environment chain</li>
+</ul></li>
+<li>Matching pairs
+<ul>
+<li><code>rlang::enquo()</code> -&gt; <code>!!</code></li>
+<li><code>:=</code></li>
+</ul></li>
+<li>Lionel Henry
+<ul>
+<li>Tidy Eval <a href="https://tidyeval.tidyverse.org">https://tidyeval.tidyverse.org</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="selecting-and-doing-tidy-eval" class="section level3">
+<h3>Selecting and Doing Tidy Eval</h3>
+<ul>
+<li>Lionel Henry</li>
+<li>Two flavours:
+<ol style="list-style-type: decimal">
+<li>Selecting verbs -&gt; <code>dplyr::select()</code></li>
+<li>Action verbs -&gt; <code>dplyr::mutate()</code></li>
+</ol></li>
+<li>Quoting -&gt; delays computation, then modify and continue
+<ul>
+<li>“promise evaluation”???</li>
+</ul></li>
+<li><code>dplyr::group_by()</code> is actually an action verb
+<ul>
+<li>the <code>dplyr::group_by_at()</code> verb is the selection verb equivalent</li>
+</ul></li>
+<li>Three challenges to tidy-eval
+<ul>
+<li>user selections are made</li>
+<li>modifying selections</li>
+<li>passing selections</li>
+</ul></li>
+<li>Easiest way of doing tidy-eval is to take advantage of passing the <code>...</code></li>
 </ul>
 <hr />
+</div>
 <div id="firacode" class="section level3">
 <h3>FiraCode</h3>
 <p>Fonts in editor: <a href="https://github.com/tonsky/FiraCode">https://github.com/tonsky/FiraCode</a></p>
-<hr />
-<p>Created on 2019-01-17 by <a href="https://github.com/rstudio/rmarkdown">Rmarkdown</a> (v1.11) and R version 3.5.1 (2018-07-02).</p>
 </div>
+</div>
+<div id="fin" class="section level2">
+<h2>Fin!</h2>
+<hr />
+<p>Created on 2019-01-18 by <a href="https://github.com/rstudio/rmarkdown">Rmarkdown</a> (v1.11) and R version 3.5.1 (2018-07-02).</p>
 </div>
 </div>
 

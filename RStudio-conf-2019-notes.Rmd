@@ -180,112 +180,209 @@ Here are some notes:
 
 # `RStudio` Conference
 ## Day 1
-* `RStudio`'s Growth
-  + 1700 attendees in 2019
-  + 1100 in 2018
+### `RStudio`'s Growth
+* 1700 attendees in 2019
+* 1100 in 2018
 
-* Concept of a "Data Compendium"
-  + stratified agreed-upon project structure
-  + Include a simple "DESCRIPTION"-like minimal file for dependencies
-  + Include a `Dockerfile` to the compendium
-  + Karthik Ram: [https://github.com/karthik](https://github.com/karthik)
-  + `Drake` package -> Dataframes in R for (GNU) `Make`
-    + instead of `Makefile`
-  + `piggyback` package -> link binaries to specific GitHub versions
+### Concept of a "Data Compendium"
+* stratified agreed-upon project structure
+* Include a simple "DESCRIPTION"-like minimal file for dependencies
+* Include a `Dockerfile` to the compendium
+* Karthik Ram: [https://github.com/karthik](https://github.com/karthik)
+* `Drake` package -> data frames in R for (GNU) `Make`
+  + instead of `Makefile`
+* `piggyback` package -> link binaries to specific GitHub versions
  
-* `RStudio` IDE 1.2
-  + SQL, Python, D3, Stan compatible -> all within `RStudio`
-  + Python chunks are now non-independent -> can refer to variables from other chunks
-  + D3 -> visualizations -> ex. `bubbles.js`
-  + New Python functionality -> line-by-line execution
-  + New Featues:
-    + Background jobs -> don't have to wait for scrips to finish
-      + Use "source as local job" (dropdown menu)
-      + Can run multiple simultaneous jobs
-    + Auto-installation of missing R packages
-      + analsis of R script for libraries not installed -> appears at top of scripter
-    + Rmarkdown -> PowerPoint (dropdown menu)
-    + Custom themes -> nightowl
+### `RStudio` IDE 1.2
+* SQL, Python, D3, Stan compatible -> all within `RStudio`
+* Python chunks are now non-independent -> can refer to variables from other chunks
+* D3 -> visualizations -> ex. `bubbles.js`
+* New Python functionality -> line-by-line execution
+* New Features:
+  + Background jobs -> don't have to wait for scrips to finish
+    + Use "source as local job" (drop-down menu)
+    + Can run multiple simultaneous jobs
+  + Auto-installation of missing R packages
+    + analysis of R script for libraries not installed -> appears at top of script editor
+  + Rmarkdown -> PowerPoint (drop-down menu)
+  + Custom themes -> `night owlish`
 
-* `RStudio` Package Manager (Sean Lopp)
-  + managing central repository
-  + automatic versioning
-  + CRAN, curated CRAN, local pkgs, GitHub
-  + usage metrics
-  + `countdeps::countdeps()`
-  + `rstd.io/countdeps`
+### `RStudio` Package Manager (Sean Lopp)
+* managing central repository
+* automatic versioning
+* CRAN, curated CRAN, local packages, GitHub
+* usage metrics
+* `countdeps::countdeps()`
+* `rstd.io/countdeps`
   
-* `RStudio` Job Launcher
-  + launch independent jobs to a server without waiting within the IDE
-  + For use with `RStudio` Server product line
-  + Future releases of `RStudio` will trickle down various levels
+### `RStudio` Job Launcher
+* launch independent jobs to a server without waiting within the IDE
+* For use with `RStudio` Server product line
+* Future releases of `RStudio` will trickle down various levels
   
-* The `mlflow` platform
-  + for managing machine learning workflows
-    1. keeps track of what you did
-    1. bundles your project for reproducibility
-    1. models
+### The `mlflow` platform
+* for managing machine learning workflows
+  1. keeps track of what you did
+  1. bundles your project for reproducibility
+  1. models
     
-* Democratizing `RStudio` API
-  + James Blair (Software engineer @ `RStudio`)
-  + Using the `plumber` package
-    + Create API endpoints for any arbitrary R functions
-    + Uses `roxygen` style tags (`#*`) to identify `plumber`
-      specific commants/control sequences
-    + Functions with `OpenAPI` under the hood
-    + Works well with `JSON` and `YAML`
-  + Similar to `Shiny Apps` provided to end users
-  + Facilitates hand-off between R developers of Shiny Apps to software
-    engineers who typically want programatic access
-    + `Plumber` can facilitate this transition
-  + The talk [https://github.com/sol-eng/plumber-model](https://github.com/sol-eng/plumber-model)
-  + **Example**: created a quick predict model that a Swift App developer was 
-    easily able to turn into a phone App, where the developer had no idea how
-    to use `R`.
+### Democratizing `RStudio` API
+* James Blair (Software engineer @ `RStudio`)
+* Using the `plumber` package
+  + Create API endpoints for any arbitrary R functions
+  + Uses `roxygen` style tags (`#*`) to identify `plumber`
+    specific commants/control sequences
+  + Functions with `OpenAPI` under the hood
+  + Works well with `JSON` and `YAML`
+* Similar to `Shiny Apps` provided to end users
+* Facilitates hand-off between R developers of Shiny Apps to software
+  engineers who typically want programmatic access
+  + `Plumber` can facilitate this transition
+* The talk [https://github.com/sol-eng/plumber-model](https://github.com/sol-eng/plumber-model)
+* **Example**: created a quick predict model that a Swift App developer was 
+  easily able to turn into a phone App, where the developer had no idea how
+  to use `R`.
 
-* Model representaion with `Broom`  
-  + Alex Hayes
-  + No uniform convension or standard for model object shapes
-  + `broom::tidy()` -> returns tibble of model `summary()` -> rows == parameters
-    + also hase a `CI=` argument
-  + `broom::glance()` -> 1 row tibble
-  + `broom::augment()` -> add infomation about observations to a dataset
+### Model representation with `Broom`  
+* Alex Hayes
+* No uniform convention or standard for model object shapes
+* `broom::tidy()` -> returns tibble of model `summary()` -> rows == parameters
+  + also has a `CI=` argument
+* `broom::glance()` -> 1 row tibble about Goodness of Fit
+* `broom::augment()` -> add information about observations to a dataset
   
 * Tensor flow eager execution
   + `Keras` functional API
   + Generative adversarial networks (GANs)
   + Variational auto-encoders (VAEs)
   
-* Karl Broman
-  + rewriting a very old R pkg -> R/qtl (quantitative trait loci)
-  + Hilarious ...
-  + Long-term story of an old package, mistakes made, all sorts of hilarious
-    what-not-to-do anecdotes
+### Karl Broman
+* rewriting a very old R pkg -> `R/qtl` (quantitative trait loci)
+* Hilarious ...
+* Long-term story of an old package, mistakes made, all sorts of hilarious
+  what-not-to-do anecdotes
   
-* The `gganimate()` cookbook
-  + Thomas Lin Pedersen
-  + a grammar of animated graphics -> extension of `ggplot2`
-  + Three types:
-    + transitions -> move fig from one to the other
-    + views -> change viewpoint
-    + shadows -> memory of the previous state to create trails on points
-  + A [Getting started guide](www.gganimate.com)
-  + Interpolates data to ensure animation is smooth -> corrects frame rate on the fly
+### The `gganimate()` cookbook
+* Thomas Lin Pedersen
+* a grammar of animated graphics -> extension of `ggplot2`
+* Three types:
+  + transitions -> move fig from one to the other
+  + views -> change viewpoint
+  + shadows -> memory of the previous state to create trails on points
+* A [Getting started guide](www.gganimate.com)
+* Interpolates data to ensure animation is smooth -> corrects frame rate on the fly
 
 
 ## Day 2
+### A fresh approach to pkg mgmt with `pkg`
+* Gabor Csardi
+* `devtools::install_github("r-lib/pkg")`
+* The `pkg` package has 3 main features:
+  + Speedy features: concurrent HTTP requests, building, and install. Lazy
+    downloads (don't install if unnecessary). And caching meta data & pkg files
+  + Safety features: fails on ERROR, conflicts declared prior to install,
+    all package dependencies in a private library, detect and fail for
+    loaded packages. Also uses sub-process to perform install to work around
+    loaded package interferences
+  + Convenience features: Progress bar, CRAN, BioConductor, GitHub,
+    Remotes -> DESCRIPTION
+    ```
+    Remotes:
+      r-lib/pkgcache,
+      tidyverse/glue@dev
+    ```
+  + Everything all in the same call!
+    + `pkg::pkg_install("dplyr", lib = "/tmp/lib")` -> CRAN
+    + `pkg::pkg_install("eisa", lib = "/tmp/lib")` -> BioConductor. Same call!
+    + `pkg::pkg_install("r-lib/pkg", lib = "/tmp/lib")` -> GitHub. Same call!
+  + Conflicts
+    + Automatically detected early and trips ERROR
+  + Safe and Convenient workflows
+    + Everything set up in a `.Rprofile` and `DESCRIPTION` files
+    + Not too convenient yet, so this will eventually change
+  
+### Managing Dependencies
+* Jim Hester
+* The zero-dependency myth
+* Concept of `bitrot` -> gradual change creeps in and code no longer works
+* Not all dependencies are equal! It's OK to have some.
+* Issues to consider:
+  + pkg size
+  + install time
+  + other dependencies
+  + system-level dependencies (e.g. `rJava` is a pain)
+* Must carefully weigh the cost-benefit of adding a particular package
+* There are pitfalls of dependency removal
+  + e.g. less testing
+  + you're not as good as you think you are
+* The `itdepends` package
+  + helps weight pros-cons of adding a package
+  + `itdepends::dep_usage_proj()` -> for a R project
+  + `itdepends::dep_usage_pkg()` -> for a package
+  + `itdepends::dep_weight()`
+  + `itdepends::dep_plot_time()` -> graphical display of install time and size
+  + `itdepends::dep_plot_size()`
+  + `itdepends::dep_locate("purrr")` -> assist removal, finds all instances of a dependency
+  + Slides
+  [https://speakerdeck.com/jimhester/it-depends](https://speakerdeck.com/jimhester/it-depends)
 
-* blah
-* foo
+
+### The `vctrs` package
+* Hadley Wickham
+* Type stability
+  + rules associated with `c()` and lowest type in concatenation
+    1. types should be stable
+    1. the order should not dictate the result -> `c(NULL, date)` vs `c(data, NULL)`
+    1. the rules should be consistent
+  + Main function -> `vec_c()`
+* Alternative:
+  + `vec_typeof()`
+* Recycling rules are strange
+  + `c(1, 2) + c(1, 2, 3)`
+* New rules for vector classes
+* Website: [https://vctrs.r-lib.org/](https://vctrs.r-lib.org/)
+
+### Tidy Eval in Context
+* Jenny Bryan
+* What is tidy-eval?
+  + toolkit for meta-programming (meta-programming)
+    + NSE, naked variable names, etc.
+  + tidy-eval powers things like `quosures`
+* NSE
+  + manipulate either the expression before it's executed or the environment
+    chain
+* Matching pairs
+  + `rlang::enquo()` -> `!!`
+  + `:=`
+* Lionel Henry
+  + Tidy Eval [https://tidyeval.tidyverse.org](https://tidyeval.tidyverse.org)
+
+### Selecting and Doing Tidy Eval
+* Lionel Henry
+* Two flavours:
+  1. Selecting verbs -> `dplyr::select()`
+  1. Action verbs -> `dplyr::mutate()`
+* Quoting -> delays computation, then modify and continue
+  + "promise evaluation"???
+* `dplyr::group_by()` is actually an action verb
+  + the `dplyr::group_by_at()` verb is the selection verb equivalent
+* Three challenges to tidy-eval
+  + user selections are made
+  + modifying selections
+  + passing selections
+* Easiest way of doing tidy-eval is to take advantage of passing the `...`
 
 
---------------
+-------------------------
 
 ### FiraCode
 Fonts in editor:
 [https://github.com/tonsky/FiraCode](https://github.com/tonsky/FiraCode)
 
--------------------------
+
+## Fin!
+
+--------------
 
 Created on `r Sys.Date()` by [Rmarkdown](https://github.com/rstudio/rmarkdown)
 (v`r utils::packageVersion("rmarkdown")`) and `r R.version$version.string`. 
