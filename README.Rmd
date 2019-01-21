@@ -33,6 +33,15 @@ Data, code, and workshop files used during the RStudio Conference
 * Jim Hester: [https://github.com/jimhester](https://github.com/jimhester)
 
 
+## Links
+* Rewrite Git history
+[https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
+
+* First Contributions
+[https://github.com/thisisnic/first-contributions](https://github.com/thisisnic/first-contributions)
+
+------------
+
 <details>
 <summary>Session info</summary>
 ```{r}

@@ -20,6 +20,16 @@ Bryan.
   - Jenny Bryan: <https://github.com/jennybc>
   - Jim Hester: <https://github.com/jimhester>
 
+## Links
+
+  - Rewrite Git history
+    <https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History>
+
+  - First Contributions
+    <https://github.com/thisisnic/first-contributions>
+
+-----
+
 <details>
 
 <summary>Session info</summary>
@@ -35,8 +45,8 @@ devtools::session_info()
 #>  language (EN)                        
 #>  collate  en_US.UTF-8                 
 #>  ctype    en_US.UTF-8                 
-#>  tz       America/Chicago             
-#>  date     2019-01-17                  
+#>  tz       America/Denver              
+#>  date     2019-01-20                  
 #> 
 #> ─ Packages ──────────────────────────────────────────────────────────────
 #>  package     * version date       lib source        
@@ -83,6 +93,6 @@ devtools::session_info()
 
 -----
 
-Created on 2019-01-17 by
+Created on 2019-01-20 by
 [Rmarkdown](https://github.com/rstudio/rmarkdown) (v1.11) and R version
 3.5.1 (2018-07-02).
