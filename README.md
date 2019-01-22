@@ -11,9 +11,13 @@ Bryan.
 
 -----
 
-## Course Bookdown site
+## Course GitHub Pages site
 
 [https://jennybc.github.io/wtf-2019-rsc](https://jennybc.github.io/wtf-2019-rsc/)
+
+## This Repo GitHub Page
+
+[https://stufield.github.io/rstudio-conf-2019](https://stufield.github.io/rstudio-conf-2019/)
 
 ## Instructor GitHub
 
@@ -46,7 +50,7 @@ devtools::session_info()
 #>  collate  en_US.UTF-8                 
 #>  ctype    en_US.UTF-8                 
 #>  tz       America/Denver              
-#>  date     2019-01-20                  
+#>  date     2019-01-21                  
 #> 
 #> ─ Packages ──────────────────────────────────────────────────────────────
 #>  package     * version date       lib source        
@@ -93,6 +97,6 @@ devtools::session_info()
 
 -----
 
-Created on 2019-01-20 by
+Created on 2019-01-21 by
 [Rmarkdown](https://github.com/rstudio/rmarkdown) (v1.11) and R version
 3.5.1 (2018-07-02).
