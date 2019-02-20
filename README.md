@@ -19,6 +19,9 @@ Bryan.
 
 [https://stufield.github.io/rstudio-conf-2019](https://stufield.github.io/rstudio-conf-2019/)
 
+[personal notes](notes/RStudio-conf-2019-notes)
+
+
 ## Instructor GitHub
 
   - Jenny Bryan: <https://github.com/jennybc>
