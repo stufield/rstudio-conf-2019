@@ -42,15 +42,15 @@ Bryan.
 devtools::session_info()
 #> ─ Session info ──────────────────────────────────────────────────────────
 #>  setting  value                       
-#>  version  R version 3.5.1 (2018-07-02)
-#>  os       macOS  10.14.2              
+#>  version  R version 3.5.2 (2018-12-20)
+#>  os       macOS Mojave 10.14.3        
 #>  system   x86_64, darwin15.6.0        
 #>  ui       X11                         
 #>  language (EN)                        
 #>  collate  en_US.UTF-8                 
 #>  ctype    en_US.UTF-8                 
 #>  tz       America/Denver              
-#>  date     2019-01-21                  
+#>  date     2019-02-20                  
 #> 
 #> ─ Packages ──────────────────────────────────────────────────────────────
 #>  package     * version date       lib source        
@@ -97,6 +97,6 @@ devtools::session_info()
 
 -----
 
-Created on 2019-01-21 by
+Created on 2019-02-20 by
 [Rmarkdown](https://github.com/rstudio/rmarkdown) (v1.11) and R version
-3.5.1 (2018-07-02).
+3.5.2 (2018-12-20).
