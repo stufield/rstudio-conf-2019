@@ -27,7 +27,10 @@ Data, code, and workshop files used during the RStudio Conference
 [https://jennybc.github.io/wtf-2019-rsc](https://jennybc.github.io/wtf-2019-rsc/)
 
 ## This Repo GitHub Page
-[https://stufield.github.io/rstudio-conf-2019](https://stufield.github.io/rstudio-conf-2019/)
+[rstudio-conf-2019](https://stufield.github.io/rstudio-conf-2019/)
+
+[Personal Notes](RStudio-conf-2019-notes)
+
 
 ## Instructor GitHub
 * Jenny Bryan: [https://github.com/jennybc](https://github.com/jennybc)

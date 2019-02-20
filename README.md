@@ -17,10 +17,9 @@ Bryan.
 
 ## This Repo GitHub Page
 
-[https://stufield.github.io/rstudio-conf-2019](https://stufield.github.io/rstudio-conf-2019/)
+[rstudio-conf-2019](https://stufield.github.io/rstudio-conf-2019/)
 
-[personal notes](notes/RStudio-conf-2019-notes)
-
+[Personal Notes](RStudio-conf-2019-notes)
 
 ## Instructor GitHub
 
