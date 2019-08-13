@@ -1,5 +1,6 @@
 ---
 title: "RStudio::conf 2019 Notes"
+author: Stu Field
 output:
   github_document:
   toc: true
@@ -14,6 +15,7 @@ output:
 
 
 # Workshop: What they forgot to tell you about R
+**January 15-16, 2019**
 
 ## Day 1
 ### Sessions 1-2
@@ -179,6 +181,8 @@ Here are some notes:
 
 
 # `RStudio` Conference
+**January 17-18, 2019**
+
 ## Day 1
 ### `RStudio`'s Growth
 * 1700 attendees in 2019
@@ -384,5 +388,5 @@ Fonts in editor:
 
 --------------
 
-Created on `r Sys.Date()` by [Rmarkdown](https://github.com/rstudio/rmarkdown)
+Created by [Rmarkdown](https://github.com/rstudio/rmarkdown)
 (v`r utils::packageVersion("rmarkdown")`) and `r R.version$version.string`. 

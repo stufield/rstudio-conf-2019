@@ -1,9 +1,12 @@
 RStudio::conf 2019 Notes
 ================
+Stu Field
 
 -----
 
 # Workshop: What they forgot to tell you about R
+
+**January 15-16, 2019**
 
 ## Day 1
 
@@ -191,6 +194,8 @@ Here are some notes:
 -----
 
 # `RStudio` Conference
+
+**January 17-18, 2019**
 
 ## Day 1
 
@@ -436,6 +441,5 @@ Fonts in editor: <https://github.com/tonsky/FiraCode>
 
 -----
 
-Created on 2019-02-20 by
-[Rmarkdown](https://github.com/rstudio/rmarkdown) (v1.11) and R version
-3.5.2 (2018-12-20).
+Created by [Rmarkdown](https://github.com/rstudio/rmarkdown) (v1.11) and
+R version 3.5.2 (2018-12-20).
